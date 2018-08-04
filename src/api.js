@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const pre = path => `https://api.imgur.com/3${path}`
 
-const key = require('./secret.json').IMGUR_KEY
+const key = require('./config/secret.json').IMGUR_KEY
 
 const config = {
   headers: {
