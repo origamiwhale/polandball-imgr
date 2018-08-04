@@ -6,7 +6,10 @@ import { actions as imagesActions } from '../ducks/images.ducks'
 
 import MainView from './Main.view'
 
-const mapStateToProps = () => ({})
+const mapStateToProps = ({ images: { loaded, posts } }) => ({
+  loaded,
+  posts
+})
 
 const mapDispatchToProps = dispatch => ({
   imagesActions: bindActionCreators(imagesActions, dispatch)
@@ -19,8 +22,12 @@ class Main extends Component {
   }
 
   render () {
+    const { loaded, posts } = this.props
+    if (!loaded) {
+      return null
+    }
     return (
-      <MainView />
+      <MainView posts={posts} />
     )
   }
 }

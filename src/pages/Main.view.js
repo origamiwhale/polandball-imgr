@@ -1,11 +1,15 @@
 import React from 'react'
 
 import './main.css'
+import Thumbnails from './Main/Thumbnails'
 
-const Main = () => {
+const Main = ({ posts }) => {
   return (
-    <div className='main'>
+    <div id='main'>
       Main
+      {
+        <Thumbnails posts={posts} />
+      }
     </div>
   )
 }

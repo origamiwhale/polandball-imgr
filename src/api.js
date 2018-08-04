@@ -19,6 +19,6 @@ export const testApi = () =>
   get('/tags')
     .then(response => response.data.data)
 
-export const search = (sort = 'time', window = 'day', page = '0', query = 'polandball') =>
+export const search = (sort = 'time', window = 'day', page = '1', query = 'polandball') =>
   get(`/search/${sort}/${window}/${page}/?q=${query}`)
     .then(response => response.data.data)

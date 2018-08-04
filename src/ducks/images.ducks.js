@@ -20,7 +20,8 @@ export default function reducer (state = initialState, action = {}) {
     case FETCH_DONE:
       return {
         ...state,
-        loading: false
+        loading: false,
+        loaded: true
       }
     case LOAD_POSTS:
       return {
@@ -51,7 +52,7 @@ export const actions = {
       search()
         .then(data => {
           dispatch(loadPosts(
-            data.items[0].items
+            data.items[0].items.filter(i => i.type === 'post' && i.post.images_count > 0)
           ))
 
           dispatch(fetchDone())
