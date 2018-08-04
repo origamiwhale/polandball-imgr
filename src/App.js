@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
+
+import { testApi } from './api'
+
 import logo from './logo.svg'
 import './App.css'
 
 class App extends Component {
+  componentDidMount () {
+    testApi().then(data => console.log(data))
+  }
+
   render () {
     return (
       <div className='App'>

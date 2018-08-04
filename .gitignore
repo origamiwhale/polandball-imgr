@@ -22,3 +22,6 @@ yarn-error.log*
 
 # sass build products
 /src/**/*.css
+
+# secret
+secret.json
