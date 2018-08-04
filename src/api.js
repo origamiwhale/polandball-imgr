@@ -10,8 +10,15 @@ const config = {
   }
 }
 
-export const testApi = () =>
+const get = path =>
   axios
-    .get(pre('/tags'), config)
-    .then(response => response.data.data)
+    .get(pre(path), config)
     .catch(error => console.log(error))
+
+export const testApi = () =>
+  get('/tags')
+    .then(response => response.data.data)
+
+export const search = (sort = 'time', window = 'day', page = '0', query = 'polandball') =>
+  get(`/search/${sort}/${window}/${page}/?q=${query}`)
+    .then(response => response.data.data)
