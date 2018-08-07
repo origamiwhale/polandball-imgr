@@ -13,7 +13,7 @@ const Thumbnail = ({ url }) => {
           (src, loading) => (
             loading
               ? <ReactLoading type='spin' color='white' />
-              : <img src={url} />
+              : <img src={url} alt='' />
           )
         }
       </ProgressiveImage>

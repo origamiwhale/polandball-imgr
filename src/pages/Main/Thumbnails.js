@@ -18,7 +18,7 @@ class Thumbnails extends Component {
       <div id='thumbnails' >
         {
           posts.slice(0, limit).map(p =>
-            <Thumbnail url={p.post.images[0].link} />
+            <Thumbnail key={p.id} url={p.post.images[0].link} />
           )
         }
         {
