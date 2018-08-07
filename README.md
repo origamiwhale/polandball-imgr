@@ -10,7 +10,12 @@ $ yarn install
 $ yarn start
 ```
 
-`create-react-app`  `standard.js`  `sass`  `react-redux`  `redux-thunk`
+`create-react-app`  
+`standard.js`  
+`sass`  
+`react-redux` 
+`ducks-modular-redux` 
+`redux-thunk`
 
 ======================
 
