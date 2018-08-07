@@ -1,5 +1,7 @@
 ## polandball imgur client
 
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+
 * node 8.11.3
 * yarn 1.7.0
 
