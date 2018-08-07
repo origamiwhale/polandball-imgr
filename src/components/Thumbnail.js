@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ProgressiveImage from 'react-progressive-image'
 import ReactLoading from 'react-loading'
 
@@ -18,6 +19,10 @@ const Thumbnail = ({ url }) => {
       </ProgressiveImage>
     </div>
   )
+}
+
+Thumbnail.propTypes = {
+  url: PropTypes.string.isRequired
 }
 
 export default Thumbnail

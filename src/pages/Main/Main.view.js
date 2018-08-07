@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import Thumbnails from './Thumbnails'
 
 import './main.css'
-import Thumbnails from './Main/Thumbnails'
 
 const Main = ({ posts }) => {
   return (
@@ -12,6 +13,10 @@ const Main = ({ posts }) => {
       }
     </div>
   )
+}
+
+Main.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
 export default Main

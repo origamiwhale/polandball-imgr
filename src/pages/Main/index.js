@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { actions as imagesActions } from '../ducks/images.ducks'
+import { actions as imagesActions } from '../../ducks/images.ducks'
 
 import MainView from './Main.view'
 
@@ -30,6 +31,12 @@ class Main extends Component {
       <MainView posts={posts} />
     )
   }
+}
+
+Main.propTypes = {
+  loaded: PropTypes.bool.isRequired,
+  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  imagesActions: PropTypes.objectOf(PropTypes.func).isRequired
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main)
