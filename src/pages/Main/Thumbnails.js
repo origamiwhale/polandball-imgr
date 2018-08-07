@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ThumbnailView from '../../components/Thumbnail.view'
+import Thumbnail from '../../components/Thumbnail'
 
 class Thumbnails extends Component {
   state = {
@@ -18,7 +18,7 @@ class Thumbnails extends Component {
       <div id='thumbnails' >
         {
           posts.slice(0, limit).map(p =>
-            <ThumbnailView url={p.post.images[0].link} />
+            <Thumbnail url={p.post.images[0].link} />
           )
         }
         {
